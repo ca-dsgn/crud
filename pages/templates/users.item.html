@@ -1,0 +1,41 @@
+<li data-id="{{ user.id }}">
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div class="columns medium-3">
+					<p class="label">{{ attribute(langs, cookie.lang).user.label_email }}:</p>
+					<p class="value email">
+					{%- if search_for -%}
+					
+						{{ user.email|ireplace({(search_for): '<span class="highlight">' ~ (search_for) ~ '</span>'})|raw }}
+						
+					{%- else -%}
+						
+						{{ user.email }}
+						
+					{%- endif -%}
+					</p>
+				</div>
+				<div class="columns medium-3 end">
+					<p class="label">{{ attribute(langs, cookie.lang).user.label_firstname }}:</p>
+					<p class="value team">{{ user.firstname }}</p>
+				</div>
+				<div class="columns medium-3 end">
+					<p class="label">{{ attribute(langs, cookie.lang).user.label_lastname }}:</p>
+					<p class="value team">{{ user.lastname }}</p>
+				</div>
+				<div class="columns medium-3 end">
+					<p class="label">{{ attribute(langs, cookie.lang).user.label_created }}:</p>
+					<p class="value created">{{ user.created }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="options">
+			<a class="icon"><span class="entypo-down-open"></span></a>
+			<ul>
+				<li><a class="edit" href="/users/edit?id={{ user.id }}">{{ attribute(langs, cookie.lang).user.option_edit }}</a></li>
+				<li><a class="remove">{{ attribute(langs, cookie.lang).user.option_remove }}</a></li>
+			</ul>
+		</div>
+	</div>
+</li>

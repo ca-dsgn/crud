@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="columns large-12">
+		<ul class="accordion" data-accordion="acdr2l-accordion" role="tablist">
+			{% for faq in faqs.items %}
+			<li class="accordion-item" data-accordion-item="">
+				<a class="accordion-title" aria-controls="accordion-{{ loop.index }}" role="tab" id="accordion-{{ loop.index }}-label" aria-expanded="false" aria-selected="false">
+					<p class="label">Question</p>
+					<p class="question">{{ faq.question }}</p>
+				</a>
+				<div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="accordion-{{ loop.index }}-label" aria-hidden="true" id="accordion-{{ loop.index }}">
+					<p class="label">Answer</p>
+					<div class="answer">{{ faq.answer|raw }}</div>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

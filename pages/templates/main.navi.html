@@ -1,0 +1,7 @@
+{% if user_role < 2 %}
+<ul class="clearfix">
+	{% for item in attribute(langs, cookie.lang).navi|cast_to_array %}
+	<li{{ item.1.link in request  ? ' class="active"' : '' }}><a href="{{ item.1.link }}">{{ item.1.name }}</a></li>
+	{% endfor %}
+</ul>
+{% endif %}

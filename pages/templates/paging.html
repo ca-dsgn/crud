@@ -1,0 +1,20 @@
+{% if items.total > items.items_per_page %}
+<div class="row">
+	<div class="columns large-12">
+		<ul class="paging">
+			{% if items.page != 1 %}
+			<li><a class="prev"><span class="entypo-left-open"></span></a></li>
+			{% endif %}
+			
+			{% set pages = (items.total/items.items_per_page)|round(0, 'ceil') %}
+			{% for page in 1..pages %}
+			<li><a href="?page={{ loop.index }}"{{ loop.index == items.page ? ' class="active"' : ''}}>{{ loop.index }}</a></li>
+			{% endfor %}
+			
+			{% if items.page != pages %}
+			<li><a class="next"><span class="entypo-right-open"></span></a></li>
+			{% endif %}
+		</ul>
+	</div>
+</div>
+{% endif %}

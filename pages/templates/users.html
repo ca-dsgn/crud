@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="columns large-12">
+		<a class="button" href="/users/edit">{{ attribute(langs, cookie.lang).user.btn_add_new }}</a>
+	</div>
+</div>
+<div class="row">
+	<div class="columns medium-4">
+		<p class="label">{{ attribute(langs, cookie.lang).user.label_sort_by }}</p>
+		<select id="user_sort">
+			<option value="created desc">Date created DESC</option>
+			<option value="created asc">Date created ASC</option>
+			<option value="email desc">Email DESC</option>
+			<option value="email asc">Email ASC</option>
+		</select>
+	</div>
+	<div class="columns medium-4">
+		<p class="label">{{ attribute(langs, cookie.lang).user.label_search_by }}</p>
+		<div class="input-group" id="user_search">
+		  <input class="input-group-field" type="text">
+		  <div class="input-group-button">
+			  <a class="button"><span class="entypo-search"></span></a>
+		  </div>
+		</div>
+	</div>
+</div>
+<div class="row" id="users">
+	<div class="columns large-12">
+		{% include 'users.items.html' with {'request': request, 'langs': langs, 'users': users} %}
+	</div>
+</div>
+{% include 'paging.html' with {'items': users} %}

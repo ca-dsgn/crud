@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+<title>{{ meta.title }}</title>
+<meta name="description" content="{{ meta.description }}"/>
+
+<meta id="og_title" property="og:title" content="{{ meta.title }}"/>
+<meta id="og_description" property="og:description" content="{{ meta.description }}"/>
+<meta id="og_image" property="og:image" content="{{ meta.image }}"/>
+
+<meta charset="utf-8"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ host }}css/all.css">
+</head>
+<body>
+<div class="page{{ has_session ? ' login' : '' }}">
+    <header>
+    	<div class="dark">
+			<div class="row">
+				<div class="medium-6 columns">
+					<a id="logo" href="/email">
+						<img src="/css/assets/logo.svg"/>
+					</a>
+				</div>
+				<div class="medium-6 columns">
+					{% if has_session %}
+					{% include 'main.account.html' with {'request': request, 'langs': langs, 'cookie': cookie } %}
+					{% endif %}
+				</div>
+				<div class="small-12 columns">
+					<nav class="main">
+						{% if has_session %}
+						{% include 'main.navi.html' with {'request': request, 'langs': langs} %}
+						{% endif %}
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		{{ content|raw }}
+	</section>
+	<footer>
+		<div class="row">
+			<div class="medium-6 columns">
+				<nav class="footer">
+					{% include 'main.navi.html' with {'request': request, 'langs': langs} %}
+				</nav>
+			</div>
+			<div class="medium-6 columns text-right">
+				<img src="/css/assets/dhbw.svg"/>
+			</div>
+		</div>
+	</footer>
+</div>
+<script type="text/javascript" src="{{ host }}js/all.js"></script>
+{% if has_session %}
+<script type="text/javascript" src="{{ host }}js/all_login.js"></script>
+{% endif %}
+<script type="text/javascript">
+
+	var host = '{{ host }}';
+	var login = '{{ has_session ? 'true' : 'false' }}';
+	var langs = {{ langs|json_encode()|raw }};
+	
+</script>
+</body>	
+</html>

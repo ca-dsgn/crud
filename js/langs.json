@@ -1,0 +1,99 @@
+{"en": {
+	 "navi": {
+		
+		"users": {
+			"name": "Users",
+			"link": "/users"
+		},
+		"page": {
+			"name": "Page",
+			"link": "/page"
+		},
+		"settings": {
+			"name": "Settings",
+			"link": "/settings"
+		},
+		"faq": {
+			"name": "FAQ",
+			"link": "/faq"
+		}
+	},
+	"breadcrumbs": {
+		
+		"/": [
+
+			{
+				"name": "Login",
+				"link": "/"
+			}
+		],
+		"/users": [
+
+			{
+				"name": "User Management",
+				"link": "/users"
+			}
+		]
+	},
+	"user": {
+		"btn_add_new": "Add new user",
+		"label_sort_by": "Sort by",
+		"label_search_by": "Search by Email",
+		"label_email": "E-Mail",
+		"label_firstname": "Firstname",
+		"label_lastname": "Lastname",
+		"label_password": "Password",
+		"label_password_repeat": "Password repeat",
+		"label_created": "Created",
+		"label_edited": "Edited",
+		"option_edit": "Edit",
+		"option_remove": "Remove",
+		"btn_save": "Save",
+		"btn_cancel": "Cancel",
+		"confirm_delete": "Are you sure you want to delete this user?",
+		"headline_edit": "Edit user",
+		"headline_new": "New user"
+	},
+	"email": {
+		"btn_add_new": "Create new Mail",
+		"label_sort_by": "Sort by",
+		"label_search_by": "Search by Mail name",
+		"label_name": "Name",
+		"label_created": "Created",
+		"label_edited": "Edited",
+		"label_created_by": "Created by",
+		"option_edit": "Edit",
+		"option_remove": "Remove",
+		"option_duplicate": "Duplicate as new mail",
+		"option_download_html": "Download as HTML",
+		"btn_save": "Save",
+		"btn_cancel": "Cancel",
+		"confirm_delete": "Are you sure you want to delete this mail?",
+		"headline_edit": "Edit mail",
+		"headline_new": "New mail"
+	},
+	"login": {
+ 		
+		"headline": "Sign in with Campaign builder account",
+		"username": "Username",
+		"password": "Password",
+		"label_retry": "Please try again.",
+		"btn_login": "Sign in",
+		"btn_forgot": "Forgot password?"
+	 },
+ 	"forgot": {
+		"headline": "Forgot password?",
+		"username": "Username",
+		"btn_send": "Send new password",
+		"headline_new_send": "Check your mail",
+		"description_new_send": "A new password has been sent to your email. Please check your inbox."
+	 },
+	"no_access": {
+	 	"headline": "No access",
+		"label": "You don't have permissions to access this page."
+ 	},
+	"not_exist": {
+		"headline": "Page does not exist",
+		"label": "If you miss this page or you think there should be something, let us know."
+	}
+}}

@@ -1,0 +1,5 @@
+<ul class="items">
+	{% for user in users.items %}
+	{% include 'users.item.html' with {'request': request, 'langs': langs, 'user': user, 'search_for': users.search_for} %}
+	{% endfor %}
+</ul>

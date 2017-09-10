@@ -1,0 +1,41 @@
+<div class="row">
+	<div class="columns small-12">
+		{% if user %}
+			<h2>{{ attribute(langs, cookie.lang).user.headline_edit }}</h2>
+		{% else %}
+			<h2>{{ attribute(langs, cookie.lang).user.headline_new }}</h2>
+		{% endif %}
+	</div>
+</div>
+<div class="row">
+	<div class="columns medium-4">
+		<p class="label">{{ attribute(langs, cookie.lang).user.label_email }}</p>
+		<p class="value"><input type="email" id="email" value="{{ user.item.email }}"/></p>
+	</div>
+	<div class="columns medium-4">
+		<p class="label">{{ attribute(langs, cookie.lang).user.label_firstname }}</p>
+		<p class="value"><input type="email" id="firstname" value="{{ user.item.firstname }}"/></p>
+	</div>
+	<div class="columns medium-4">
+		<p class="label">{{ attribute(langs, cookie.lang).user.label_lastname }}</p>
+		<p class="value"><input type="email" id="lastname" value="{{ user.item.lastname }}"/></p>
+	</div>
+	{% if not(user) %}
+	<div class="columns medium-4">
+		<p class="label">{{ attribute(langs, cookie.lang).user.label_password }}</p>
+		<p class="value"><input type="password" id="password" value=""/></p>
+	</div>
+	<div class="columns medium-4 end">
+		<p class="label">{{ attribute(langs, cookie.lang).user.label_password_repeat }}</p>
+		<p class="value"><input type="password" id="password_repeat" value=""/></p>
+	</div>
+	{% endif %}
+</div>
+<div class="row" id="{{ user ? 'user_edit' : 'user_new' }}">
+	<div class="columns small-6">
+		<a class="button grey" href="/users">{{ attribute(langs, cookie.lang).user.btn_cancel }}</a>
+	</div>
+	<div class="columns small-6 text-right">
+		<a class="button save">{{ attribute(langs, cookie.lang).user.btn_save }}</a>
+	</div>
+</div>
