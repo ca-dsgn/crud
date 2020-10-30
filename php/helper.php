@@ -414,7 +414,11 @@
 			/* Standard value for lang */
 			if (!isset($_COOKIE["lang"])) {
 				
-				$_COOKIE["lang"] = "en";
+				set_cookie("lang","en");
+			}
+			elseif (isset($_GET["lang"])) {
+
+				set_cookie("lang",$_GET["lang"]);
 			}
 			
 			/* Global vars for $data */

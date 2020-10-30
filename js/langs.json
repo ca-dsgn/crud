@@ -18,6 +18,9 @@
 			"link": "/faq"
 		}
 	},
+	"main": {
+		"switch_language": "Switch language"
+	},
 	"breadcrumbs": {
 		
 		"/": [
@@ -54,27 +57,9 @@
 		"headline_edit": "Edit user",
 		"headline_new": "New user"
 	},
-	"email": {
-		"btn_add_new": "Create new Mail",
-		"label_sort_by": "Sort by",
-		"label_search_by": "Search by Mail name",
-		"label_name": "Name",
-		"label_created": "Created",
-		"label_edited": "Edited",
-		"label_created_by": "Created by",
-		"option_edit": "Edit",
-		"option_remove": "Remove",
-		"option_duplicate": "Duplicate as new mail",
-		"option_download_html": "Download as HTML",
-		"btn_save": "Save",
-		"btn_cancel": "Cancel",
-		"confirm_delete": "Are you sure you want to delete this mail?",
-		"headline_edit": "Edit mail",
-		"headline_new": "New mail"
-	},
 	"login": {
  		
-		"headline": "Sign in with Campaign builder account",
+		"headline": "Sign in with your account",
 		"username": "Username",
 		"password": "Password",
 		"label_retry": "Please try again.",
@@ -95,5 +80,88 @@
 	"not_exist": {
 		"headline": "Page does not exist",
 		"label": "If you miss this page or you think there should be something, let us know."
+	}
+},
+"de": {
+	 "navi": {
+		
+		"users": {
+			"name": "Benutzer",
+			"link": "/users"
+		},
+		"page": {
+			"name": "Seite",
+			"link": "/page"
+		},
+		"settings": {
+			"name": "Einstellungen",
+			"link": "/settings"
+		},
+		"faq": {
+			"name": "FAQ",
+			"link": "/faq"
+		}
+	},
+	"main": {
+		"switch_language": "Sprache ändern"
+	},
+	"breadcrumbs": {
+		
+		"/": [
+
+			{
+				"name": "Login",
+				"link": "/"
+			}
+		],
+		"/users": [
+
+			{
+				"name": "Benutzer Verwaltung",
+				"link": "/users"
+			}
+		]
+	},
+	"user": {
+		"btn_add_new": "Neuen Benutzer hinzufügen",
+		"label_sort_by": "Sortieren nach",
+		"label_search_by": "Suche nach Email",
+		"label_email": "E-Mail",
+		"label_firstname": "Vorname",
+		"label_lastname": "Nachname",
+		"label_password": "Passwort",
+		"label_password_repeat": "Passwort Wiederholung",
+		"label_created": "Erstellt",
+		"label_edited": "Bearbeitet",
+		"option_edit": "Bearbeiten",
+		"option_remove": "Entfernen",
+		"btn_save": "Speichern",
+		"btn_cancel": "Abbrechen",
+		"confirm_delete": "Sind Sie sicher, dass Sie diesen Benutzer entfernen möchten?",
+		"headline_edit": "Benutzer bearbeiten",
+		"headline_new": "Neuer Benutzer"
+	},
+	"login": {
+		"headline": "Mit Ihrem Account anmelden",
+		"username": "Benutzername",
+		"password": "Passwort",
+		"label_retry": "Bitte versuchen Sie es noch einmal.",
+		"btn_login": "Anmelden",
+		"btn_forgot": "Passwort vergessen?"
+	 },
+ 	"forgot": {
+		"headline": "Passwort vergessen?",
+		"username": "E-Mail",
+		"btn_send": "Neues Passwort zusenden",
+		"headline_new_send": "Bitte prüfen Sie Ihren Posteingang.",
+		"description_new_send": "Ein neues Passwort wurde Ihnen per E-Mail zugesendet. Bitte prüfen Sie Ihren Posteingang."
+	 },
+	"no_access": {
+	 	"headline": "Kein Zugang",
+		"label": "Sie haben keine Berechtigung um einen Zugriff auf diese Seite zu erhalten."
+ 	},
+	"not_exist": {
+		"headline": "Seite existiert nicht",
+		"label": "Wenn Sie diese Seite vermissen oder diese Seite Ihrer Meinung nach existieren sollte, informieren Sie uns darüber."
 	}
 }}
