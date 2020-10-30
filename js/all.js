@@ -47,7 +47,7 @@ animate_box(data);$("#login").addClass("error")}}})}
 function bindings(){foundation_bindings();try{}catch(err){}}
 function get_GET(){var GET=new Array();if(location.search.length>0){var get_param_str=location.search.substring(1,location.search.length);var get_params=get_param_str.split("&");for(i=0;i<get_params.length;i++){var key_value=get_params[i].split("=");if(key_value.length==2){var key=key_value[0];var value=key_value[1];GET[key]=value}}}
 return(GET)}
-function get_domain(){if(window.location.hostname.indexOf("bitzer.dev")==-1){domain_parts=window.location.hostname.split(".")
+function get_domain(){if(window.location.hostname.indexOf("dev.crud")==-1){domain_parts=window.location.hostname.split(".")
 return domain_parts[1]+"."+domain_parts[2]}
 else{return!1}}
 function get_waiter(){html='<div class="waiter">';html+='<div class="waiter-circle1 waiter-circle"></div>';html+='<div class="waiter-circle2 waiter-circle"></div>';html+='<div class="waiter-circle3 waiter-circle"></div>';html+='<div class="waiter-circle4 waiter-circle"></div>';html+='<div class="waiter-circle5 waiter-circle"></div>';html+='<div class="waiter-circle6 waiter-circle"></div>';html+='<div class="waiter-circle7 waiter-circle"></div>';html+='<div class="waiter-circle8 waiter-circle"></div>';html+='<div class="waiter-circle9 waiter-circle"></div>';html+='<div class="waiter-circle10 waiter-circle"></div>';html+='<div class="waiter-circle11 waiter-circle"></div>';html+='<div class="waiter-circle12 waiter-circle"></div>';html+='</div>';return html}

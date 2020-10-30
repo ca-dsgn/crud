@@ -59,7 +59,7 @@
 				
 			default:
 				
-				$minifier->add($path_up."js/jquery.js");
+				$minifier->add($path_up."bower_components/jquery/dist/jquery.js");
 				$minifier->add($path_up."js/jquery-ui.min.js");
 				$minifier->add($path_up."js/jquery.ui.touch-punch.min.js");
 				$minifier->add($path_up."js/jquery.mousewheel.js");

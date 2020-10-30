@@ -7,7 +7,7 @@
 		"leafo/lessphp": "0.4.0",
 		"twig/twig": "~1.0",
 		"twig/extensions": "^1.2",
-		"raiym/instagram-php-scraper": "^0.4.5",
-		"phpmailer/phpmailer": "^5.2"
+		"phpmailer/phpmailer": "6.1.6",
+		"raiym/instagram-php-scraper": "^0.8.24"
 	}
 }

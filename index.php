@@ -6,7 +6,7 @@
 	
 	$urlparts = get_urlparts();
 
-	if ($domain == "crud.dev") {
+	if ($domain == "dev.crud") {
 		
 		get_one_css();
 		

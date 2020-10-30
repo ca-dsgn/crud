@@ -395,7 +395,7 @@ function get_GET() {
 
 function get_domain() {
 	
-	if (window.location.hostname.indexOf("crud.dev") == -1) {
+	if (window.location.hostname.indexOf("dev.crud") == -1) {
 		
 		domain_parts = window.location.hostname.split(".")
 		
