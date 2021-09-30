@@ -15,9 +15,6 @@
 				$qresult = $dblink->query($sql);
 				
 				if ($qresult->num_rows == 0) {
-					
-					$password_plain = $new_password;
-					$password = hash_password($new_password);
 
 					$sql = "UPDATE user SET ";
 					$sql.= "email='".$dblink->real_escape_string($new_email)."',";
