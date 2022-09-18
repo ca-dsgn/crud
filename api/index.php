@@ -41,7 +41,7 @@
 							$response = signin_user(
 								isset($_GET["email"]) ? $_GET["email"] : NULL,
 								isset($_GET["password"]) ? $_GET["password"] : NULL,
-								isset($_GET["persistent"]) && $_GET["persistent"] == "true" ? true : false
+								isset($_GET["persistent"]) && $_GET["persistent"] == "true" ? 1 : 0
 							);
 							break;
 							

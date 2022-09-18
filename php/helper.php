@@ -160,6 +160,11 @@
 		global $host;
 		global $app_folder;
 
+		if (IS_NULL($app_folder)) {
+
+			$app_folder = "";
+		}
+
 		if ($request_uri == NULL) {
 
 			$request_uri = $_SERVER['REQUEST_URI'];
@@ -372,44 +377,45 @@
 		}
 		else {
 			
-			Twig_Autoloader::register();
-			
-			$loader = new Twig_Loader_Filesystem($path_up."pages/templates/");
-			$twig = new Twig_Environment($loader, array(
+			$loader = new \Twig\Loader\FilesystemLoader($path_up."pages/templates/");
+			$twig = new \Twig\Environment($loader, array(
 				'debug' => true
 			));
 			
-			$twig->addExtension(new Twig_Extension_Debug());
-			$twig->addExtension(new Twig_Extensions_Extension_Date());
+			//$twig->addExtension(new Twig_Extension_Debug());
+			//$twig->addExtension(new Twig_Extensions_Extension_Date());
 			
-			$filter = new Twig_SimpleFilter('preg_replace',function ($string,$pattern,$replacement="") {
+			$filter = new \Twig\TwigFilter('preg_replace',function ($string,$pattern,$replacement="") {
 
 				return preg_replace($pattern,$replacement,$string);
 			});
 
 			$twig->addFilter($filter);
 			
-			$filter = new Twig_SimpleFilter('ireplace', function($input, array $replace) {
+			$filter = new \Twig\TwigFilter('ireplace', function($input, array $replace) {
 				
 				return str_ireplace(array_keys($replace), array_values($replace), $input);
 			});
 			
 			$twig->addFilter($filter);
 			
-			$filter = new Twig_SimpleFilter('cast_to_array', function ($stdClassObject) {
+			$filter = new \Twig\TwigFilter('cast_to_array', function ($stdClassObject) {
 				
 				$response = array();
+
+				if ($stdClassObject) {
 				
-				foreach ($stdClassObject as $key => $value) {
-					
-					$response[] = array($key, $value);
+					foreach ($stdClassObject as $key => $value) {
+						
+						$response[] = array($key, $value);
+					}
 				}
 				return $response;
 			});
 			
 			$twig->addFilter($filter);
 			
-			$template = $twig->loadTemplate($file);
+			$template = $twig->load($file);
 			
 			/* Standard value for lang */
 			if (!isset($_COOKIE["lang"])) {

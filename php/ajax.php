@@ -70,8 +70,13 @@
 			case "get_data":
 			
 				$request = $_POST["request"];
-				
-				parse_str(parse_url($request, PHP_URL_QUERY), $_GET);
+
+				if (empty($_GET) and strpos($request,"?") !== false) {
+
+					$_GET = [];
+
+					parse_str(parse_url($request, PHP_URL_QUERY), $_GET);
+				}
 				
 				$urlparts = get_urlparts($request);
 				

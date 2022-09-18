@@ -45,14 +45,10 @@
 	</section>
 	<footer>
 		<div class="row">
-			<div class="medium-3 columns">
+			<div class="medium-6 columns">
 				<nav class="footer">
 					{% include 'main.navi.html' with {'request': request, 'langs': langs} %}
 				</nav>
-			</div>
-			<div class="medium-3 columns">
-				<p>{{ attribute(langs, cookie.lang).main.switch_language }}</p>
-				<p><a href="?lang=en" target="_top">EN</a> | <a href="?lang=de" target="_top">DE</a></p>
 			</div>
 			<div class="medium-6 columns text-right">
 				<img src="/css/assets/dhbw.svg"/>
