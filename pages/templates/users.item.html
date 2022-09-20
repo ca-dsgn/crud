@@ -18,11 +18,30 @@
 				</div>
 				<div class="columns medium-3 end">
 					<p class="label">{{ attribute(langs, cookie.lang).user.label_firstname }}:</p>
-					<p class="value team">{{ user.firstname }}</p>
+					<p class="value team">
+					{%- if search_for -%}
+					
+						{{ user.firstname|ireplace({(search_for): '<span class="highlight">' ~ (search_for) ~ '</span>'})|raw }}
+						
+					{%- else -%}
+						
+						{{ user.firstname }}
+						
+					{%- endif -%}
+					</p>
 				</div>
 				<div class="columns medium-3 end">
 					<p class="label">{{ attribute(langs, cookie.lang).user.label_lastname }}:</p>
-					<p class="value team">{{ user.lastname }}</p>
+					<p class="value team">
+					{%- if search_for -%}
+					
+						{{ user.lastname|ireplace({(search_for): '<span class="highlight">' ~ (search_for) ~ '</span>'})|raw }}
+						
+					{%- else -%}
+						
+						{{ user.lastname }}
+						
+					{%- endif -%}</p>
 				</div>
 				<div class="columns medium-3 end">
 					<p class="label">{{ attribute(langs, cookie.lang).user.label_created }}:</p>

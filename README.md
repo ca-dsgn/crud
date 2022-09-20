@@ -15,14 +15,14 @@ How to setup this
 ```
 <VirtualHost *:80>
     DocumentRoot "/Library/WebServer/Documents/crud"
-    ServerName crud.dev
+    ServerName dev.crud
 </VirtualHost>
 ```
 
 3. Add this line to your hosts file. You can find this file in most cases here: /etc/hosts
 
 ```
-127.0.0.1       crud.dev
+127.0.0.1       dev.crud
 ```
 
 4. Make sure, that apaches mod_rewrite is activated in your apache config: /etc/apache2/2.4/httpd.conf

@@ -8,7 +8,11 @@
 		
 		if (isset($search_for) and $search_for != "") {
 			
-			$sql.= "WHERE user.email LIKE '%".$dblink->real_escape_string($search_for)."%' ";
+			$sql.= "WHERE (";
+			$sql.= "user.email LIKE '%".$dblink->real_escape_string($search_for)."%' OR ";
+			$sql.= "user.firstname LIKE '%".$dblink->real_escape_string($search_for)."%' OR ";
+			$sql.= "user.lastname LIKE '%".$dblink->real_escape_string($search_for)."%'";
+			$sql.= ")";
 		}
 		
 		$sql.= "ORDER BY user.created DESC";
